@@ -7,11 +7,11 @@ The client apps would either
   1. talk JSON to the Sinatra/Rails server using the normal RESTful routes.  
   2. potentially talk websockets (what would the advantages be?)
   
-In phase 1 and 2 I built my mobile UIServer as a separate application that talked TCP/IP sockets with Sinatra.  This was simpy because we hadn't learned routes yet.  Yet, websockets is an up and coming technology for de-coupled apps.  Why?
+In phase 1 and 2, I used TCP/IP sockets with Sinatra.  This was simpy because we hadn't learned routes and json.  Yet, websockets is an up and coming technology for de-coupled apps.  Why?
 
-Ultimately our problem is this:  A web app pushes stateless pages to the client "UI Server" known as a web browser.  Without being terribly clever, the entire web page is redrawn each time.  A page is a terrible metaphor for an application. 
+Ultimately our problem is this:  A web app pushes stateless pages to the client "UI Server" known as a web browser.  For the most part, the entire web page is redrawn each time.  A page is a terrible metaphor for an application. 
 
-A mobile app is the reverse: everything is coded at the client and simple data requests are made of the server.  This makes sense but it potentially means tripling the cost and complexity of our jobs: we must write a web-app, an iOS app, and Android.  Phone Gap tries to avoid this by trying to create an application out of a document's CSS and HTML.  But isn't that like racing moving vans instead of formula one cars?  Other solutions try to write "mobile-first" web apps which fail if the device is not connected. Neither of those are valuable solutions.
+A mobile app is the reverse: everything is coded at the client and simple data requests are made of the server.  This makes sense but it potentially means tripling the cost and complexity of our jobs: we must write a web-app, an iOS app, and an Android on.  Phone Gap tries to avoid this by trying to create an application out of a document's CSS and HTML.  But that strikes me as using the weakest, most document centric part of a web app to build your mobile app from.   Other solutions try to write "mobile-first" web apps which are still just browser pages.  Neither of those are acceptable solutions.
 
 I don't know what the answer is, but I will try to ask these questions:
   1. Can LiveCode be used to significantly reduce the pain and learning curve associated with mobile clients?
