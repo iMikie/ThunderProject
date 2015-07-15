@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+  <div>
+    <% if @render_club_photo %>
+      <img src="https://www.stfyc.com/images/Redesign/logo.png" class="center-logo">
+     <%= image_tag("stfyc-night.jpg") %>
+    <% else %>
+      <%= image_tag("stfyc_logo_strip.png") %>
+    <% end %>
+  </div>
+<container class="the_container">
+  <nav>
+    <div id="menu_spacer">
+    </div>
+    <ul>
+      <li><a href="#">Music</a>
+        <ul>
+          <li> <%= link_to "Sheet Music Library", songs_path %> </li>
+          <li><a href="#">Add a song</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Performances</a>
+        <ul>
+          <li><%= link_to 'View Performances', performances_path %></li>
+          <li><%= link_to 'New Performance', new_performance_path %></li>
+        </ul>
+      <li><a href="#">SOTS</a>
+        <ul>
+          <li><a href="#">Meet the SOTS</a></li>
+          <li><a href="/users/<%= session[:user_id] %>/edit">Edit Profile</a></li>
+          <li><a href="/logout">logout</a></li>
+        </ul>
+        <% if session[:user_id] %>
+        <li><a href="/logout">Logout</a></li>
+      <% else %>
+        <li><%= link_to "Login", login_path %> </li>
+        <li><%= link_to "Signup", new_user_path %> </li>
+      <% end %>
+
+    </ul>
+  </nav>
+  </div>
+
+
+  <body>
+  <%= yield %>
+  </body>
+</container>
+</html>

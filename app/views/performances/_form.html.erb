@@ -1,0 +1,47 @@
+<div class="input_box2">
+  <%= form_for(@performance) do |f| %>
+    <% if @performance.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@performance.errors.count, "error") %> prohibited this performance from being saved:</h2>
+
+        <ul>
+          <% @performance.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :title %><br>
+      <%= f.text_field :title, class: "login_field" %>
+    </div>
+    <div class="field">
+      <%= f.label :date %><br>
+      <%= f.text_field :date, class: "login_field" %>
+    </div>
+    <div class="field">
+      <%= f.label :performance_time %><br>
+      <%= f.text_field :performance_time, class: "login_field" %>
+    </div>
+    <div class="field">
+      <%= f.label :call_time %><br>
+      <%= f.text_field :call_time, class: "login_field" %>
+    </div>
+    <div class="field">
+      <%= f.label :location %><br>
+      <%= f.text_field :location, class: "login_field" %>
+    </div>
+    <div class="field">
+      <%= f.label :event_leader %><br>
+      <%= f.text_field :event_leader, class: "login_field" %>
+    </div>
+    <div class="field">
+      <%= f.label :leader_phone %><br>
+      <%= f.text_field :leader_phone, class: "login_field" %>
+    </div>
+    <div class="actions">
+      <%= f.submit class: "abut abut2" %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,20 @@
+<div class="center-container">
+  <div class="input_box">
+    <% if @error %>
+      <p class="error"><%= @error %></p>
+    <% end %>
+
+    <div class="dbox_title">Member Login</div>
+    <br>
+    <%= form_tag '/login' do %>
+        <%= text_field_tag 'username' ,nil, class:"login_field",placeholder:"Username"  %><br>
+        <%= password_field_tag 'password',nil, class:"login_field", placeholder: "Password"  %>
+      <%= submit_tag 'Submit',  class: 'abut' %>
+
+    <% end %>
+    <br>
+    <%= link_to "Signup", new_user_path %>
+  </div>
+</div>
+
+

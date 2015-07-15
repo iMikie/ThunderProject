@@ -1,0 +1,31 @@
+<div class="input_box2">
+  <%= form_for(@user) do |f| %>
+    <% if @user.errors.any? %>
+      <div id="error_explanation">
+        <%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:
+
+        <ul>
+          <% @user.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+        <br>
+        <br>
+      </div>
+    <% end %>
+
+
+
+    <!--<%= f.label :username %>-->
+    <br>
+    <%= f.text_field :username, class: "login_field", placeholder: "Username" %>
+    <br>
+    <%= f.text_field :email, class: "login_field", placeholder: "Email" %>
+    <%= f.text_field :phone_number, class: "login_field", placeholder: "Phone Number" %>
+    <br><br>
+    <%= f.password_field :password, class: "login_field", placeholder: "Password" %>
+
+    <%= f.password_field :password_confirmation, class: "login_field", placeholder: "Confirm Password" %>
+    <%= f.submit class: "abut" %>
+  <% end %>
+</div>

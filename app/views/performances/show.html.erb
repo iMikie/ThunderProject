@@ -1,0 +1,43 @@
+<div class="dbox_title">Performances</div>
+<div class="input_box2">
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <strong>Title:</strong>
+    <%= @performance.title %>
+  </p>
+
+  <p>
+    <strong>Date:</strong>
+    <%= @performance.date %>
+  </p>
+
+  <p>
+    <strong>Performance time:</strong>
+    <%= @performance.performance_time %>
+  </p>
+
+  <p>
+    <strong>Call time:</strong>
+    <%= @performance.call_time %>
+  </p>
+
+  <p>
+    <strong>:</strong>
+    <%= @performance.location %>
+  </p>
+
+  <p>
+    <strong>Event leader:</strong>
+    <%= @performance.event_leader %>
+  </p>
+
+  <p>
+    <strong>Leader phone:</strong>
+    <%= @performance.leader_phone %>
+  </p>
+
+  <%= link_to 'Edit', edit_performance_path(@performance) %>
+  <%= link_to 'Back', performances_path %>
+
+</div>

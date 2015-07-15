@@ -1,0 +1,370 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.debug {
+    /*border: 1px dotted red;*/
+}
+
+.the_container {
+    background-color: #bbbbbb;
+    width: 1100px;
+}
+
+#menu_spacer {
+    padding-left: 200px;
+    /*width: 10em;*/
+    height: 40px;
+    display: inline;
+}
+
+nav ul ul {
+
+    display: none;
+}
+
+nav ul li:hover > ul {
+    display: block;
+}
+
+#foo {
+    padding: 200px;
+    height: 50px;
+}
+
+nav {
+    /*display: inline-table;*/
+    width: 1100px;
+    height: 40px;
+    margin-right: auto;
+    background: #efefef;
+    background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);
+    background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%);
+    background: -webkit-linear-gradient(top, #efefef 0%, #bbbbbb 100%);
+}
+
+nav ul {
+
+    /*background: #efefef;*/
+    /*background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);*/
+    /*background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%);*/
+    /*background: -webkit-linear-gradient(top, #efefef 0%, #bbbbbb 100%);*/
+    /*box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.15);*/
+    padding: 0 20px;
+    /*border-radius: 10px;*/
+    list-style: none;
+    position: relative;
+    top: -15px;
+
+    display: inline-table;
+}
+
+nav ul:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li:hover {
+    background: #4b545f;
+    background: linear-gradient(top, #4f5964 0%, #5f6975 40%);
+    background: -moz-linear-gradient(top, #4f5964 0%, #5f6975 40%);
+    background: -webkit-linear-gradient(top, #4f5964 0%, #5f6975 40%);
+}
+
+nav ul li:hover a {
+    color: #fff;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px 40px;
+    color: #757575;
+    text-decoration: none;
+}
+
+nav ul ul {
+    background: #5f6975;
+    border-radius: 0px;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+}
+
+nav ul ul li {
+    float: none;
+    border-top: 1px solid #6b727c;
+    border-bottom: 1px solid #575f6a;
+    position: relative;
+}
+
+nav ul ul li a {
+    padding: 15px 40px;
+    color: #fff;
+}
+
+nav ul ul li a:hover {
+    background: #4b545f;
+}
+
+nav ul ul ul {
+    position: absolute;
+    left: 100%;
+    top: 0;
+}
+
+.title2 {
+    width: 250px;
+}
+
+.title {
+    width: 250px;
+}
+
+.composer {
+    width: 160px;
+}
+
+.voicing {
+    width: 50px;
+}
+
+.description {
+    width: 150px;
+}
+
+.larger_work {
+    width: 100px;
+}
+
+#larger_work2 {
+    width: 100px;
+}
+
+.arranger_one {
+    width: 120px;
+}
+
+.arranger_two {
+    width: 120px;
+}
+
+.PDF {
+    width: 120px;
+}
+
+th {
+    height: 40px;
+}
+
+.song-heading {
+    background: #efefef;
+    background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);
+    background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%);
+    background: -webkit-linear-gradient(top, #efefef 0%, #bbbbbb 100%);
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.15);
+    /*border-radius: 10px;*/
+    text-align: left;
+    list-style: none;
+    /*position: relative;*/
+    /*display: inline-table;*/
+}
+
+.song-row {
+    background: #abb4bf;
+    border: 1px solid #AAAAAA;
+    color: white;
+    height: 25px;
+    font: bold 12px Arial, Helvetica, sans-serif;
+}
+
+.tablediv {
+    background-color: #abb4bf;
+    padding-left: 2em;
+    width: 1068px;
+}
+
+.song_table {
+    width: 1000px;
+    padding: 1em;
+
+}
+
+.song_search {
+    padding-left: 2em;
+    margin-top: 0px;
+    padding-top: 2em;
+    width: 1076px;
+    height: 100px;
+    background-color: #EEEEEE;
+    color: #15355a;
+    font: bold 12px Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding-bottom: 0px;
+}
+
+.login-box {
+    width: 200px;
+    background-color: #555555;
+}
+
+.login_field {
+    width: 218px;
+    height: 28px;
+    background-color: #FFFFFF;
+    border: #cdcdcd 1px solid;
+    margin-bottom: 4px;
+    text-transform: none;
+    /*padding-left: 1em;*/
+    font: 14px HelveticaNeue, Helvetica, sans-serif;
+}
+
+.search_field {
+    padding-top: 3em;
+}
+
+.abut {
+    background: url(bg_abut.jpg) top left repeat-x;
+    border: none;
+    color: #fff;
+    font: bold 11px Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-left: 16em;
+    margin-bottom: 2px;
+    margin-top: 10px;
+    padding: 0px 13px;
+    overflow: visible;
+    width: auto !important;
+    height: 29px;
+    line-height: 29px;
+}
+
+.abut2 {
+    /*top: -60px;*/
+
+    position: relative;
+    left: -16em;
+}
+
+.abut3 {
+    padding: .5em;
+    text-decoration: none;
+}
+
+.dbox_title {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.input_box {
+    margin-left: 350px;
+    margin-top: 100px;
+    padding: 2em;
+    width: 300px;
+    height: 200px;
+    background-color: #EEEEEE;
+    color: #15355a;
+    font: bold 14px Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding-bottom: 10px;
+}
+
+.input_box2 {
+    margin-left: 350px;
+    /*margin-top: 100px;*/
+    padding: 2em;
+    width: 300px;
+    /*height: 250px;*/
+    background-color: #EEEEEE;
+    color: #15355a;
+    font: bold 14px Arial, Helvetica, sans-serif;
+
+    letter-spacing: 0.06em;
+    padding-bottom: 2em;
+}
+
+#error_explanation {
+    font: bold 14px Arial, Helvetica, sans-serif;
+}
+
+#login-btn-wrap {
+    width: 64px;
+    height: 30px;
+    background-color: blue;
+    color: #fff;
+}
+
+.center-logo {
+    padding-left: 20em;
+}
+
+.small_title {
+    margin-top: 2em;
+    margin-bottom: 1.2em;
+    font-style: italic;
+    font-size: 10px;
+    color: #BBBBBB;
+}
+
+.large_field {
+    font: italic 10px HelveticaNeue, Helvetica, sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    margin-top: -0.75em;
+    color: #DDDDDD;
+}
+
+.song-container {
+    display: flex;
+    justify-content: flex-start;
+    background-color: #336699;
+
+    max-width: 1100px;
+}
+
+.song-left_column {
+
+    margin-top: 1em;
+    width: 12em;
+    min-height: 20em;
+    font-family: HelveticaNeue, Helvetica, sans-serif;
+    margin-left: 3em;
+}
+
+.header {
+    height: 5em;
+
+}
+
+.song-right_column {
+    min-width: 40em;
+}
+
+.pdf {
+    flex: auto;
+    min-width: 40em;
+    height: 50em;
+}

@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="song_search">Song Search
+
+    <%= form_tag '/songs/search' do %>
+      <br>
+      <%= text_field_tag 'title', nil, class: "title2", placeholder: "Title" %>
+      <%= text_field_tag 'composer', nil, class: 'composer', placeholder: "Composer" %>
+      <%= text_field_tag 'voicing', nil, class: 'voicing', placeholder: "Voicing" %>
+      <%= text_field_tag 'category', nil, class: 'category', placeholder: "Category" %>
+      <%= text_field_tag 'larger_work', nil, class: 'larger_work', placeholder: "Larger Work" %>
+      <%= text_field_tag 'arranger_one', nil, class: 'arranger_one', placeholder: "Arranger One" %>
+      <%= text_field_tag 'arranger_two', nil, class: 'arranger_two', placeholder: "Arranger Two" %>
+      <%= submit_tag 'Search', class: "abut abut2" %>
+    <% end %>
+
+
+
+
+
+    <!--<form action="/songs/search" method="post">-->
+    <!--<br>-->
+    <!--<input id="title2" type="text" placeholder="Title" name="title">-->
+    <!--<input class="composer" type="text" placeholder="Composer" name="composer">-->
+    <!--<input class="voicing" type="text" placeholder="Voice" name="voicing">-->
+    <!--<input class="category" type="text" placeholder="Category" name="category">-->
+    <!--<input class="larger_work" type="text" placeholder="Larger Work" name="larger_work">-->
+    <!--<input class="arranger_one" type="text" placeholder="1st Arranger" name="arranger_one">-->
+    <!--<input class="arranger_two" type="text" placeholder="2nd Arranger" name="arranger_two">-->
+    <!--<input type="submit" value="Search" class='abut abut2'>-->
+    <!--</form>-->
+  </div>
+  <div class="tablediv">
+    <table class="song_table">
+      <tr class="song-heading">
+        <!--<th class="title">Title</th>-->
+        <!--<th  class="composer">Composer</th>-->
+        <!--<th class="voicing"  >Voicing</th>-->
+        <!--<th  class="description">Category</th>-->
+        <!--<th class="larger_work" >Larger Work</th>-->
+        <!--<th  class="arranger_one" >Arranger1</th>-->
+        <!--<th  class="arranger_two">Arranger2</th>-->
+        <!--<th  >PDF</th>-->
+      </tr>
+
+
+      <% @songs.each do |song| %>
+        <%= render partial: "song", :locals => {title: song.title, :song_number => song.song_number, :composer => song.composer, :larger_work => song.larger_work, :voicing => song.voicing, :category => song.category, :larger_work => song.larger_work, :arranger_one => song.arranger_one, :arranger_two => song.arranger_two, :pdf_url => song.song_number} %>
+      <% end %>
+
+
+    </table>
+  </div>
+</div>

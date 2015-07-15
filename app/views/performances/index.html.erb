@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+<div class="dbox_title input_box2">Performances </div>
+<h1>Listing Performances</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Date</th>
+      <th>Performance time</th>
+      <th>Call time</th>
+      <th>Location</th>
+      <th>Event leader</th>
+      <th>Leader phone</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @performances.each do |performance| %>
+      <tr>
+        <td><%= performance.title %></td>
+        <td><%= performance.date %></td>
+        <td><%= performance.performance_time %></td>
+        <td><%= performance.call_time %></td>
+        <td><%= performance.location %></td>
+        <td><%= performance.event_leader %></td>
+        <td><%= performance.leader_phone %></td>
+        <td><%= link_to 'Show', performance %></td>
+        <td><%= link_to 'Edit', edit_performance_path(performance) %></td>
+        <td><%= link_to 'Destroy', performance, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Performance', new_performance_path %>
