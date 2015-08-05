@@ -3,16 +3,18 @@
 <head>
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+
   <%= csrf_meta_tags %>
 </head>
-  <div>
-    <% if @render_club_photo %>
-      <img src="https://www.stfyc.com/images/Redesign/logo.png" class="center-logo">
-     <%= image_tag("stfyc-night.jpg") %>
-    <% else %>
-      <%= image_tag("stfyc_logo_strip.png") %>
-    <% end %>
-  </div>
+<div class="center">
+  <% if @render_club_photo %>
+    <img src="https://www.stfyc.com/images/Redesign/logo.png" class="center-logo">
+    <%= image_tag("stfyc-night.jpg") %>
+  <% else %>
+    <%= image_tag("stfyc_logo_strip.png") %>
+  <% end %>
+</div>
 <container class="the_container">
   <nav>
     <div id="menu_spacer">
@@ -21,7 +23,7 @@
       <li><a href="#">Music</a>
         <ul>
           <li> <%= link_to "Sheet Music Library", songs_path %> </li>
-          <li><a href="#">Add a song</a></li>
+          <li><%= link_to 'New Song', new_song_path %></li>
         </ul>
       </li>
       <li><a href="#">Performances</a>

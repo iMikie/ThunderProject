@@ -1,0 +1,49 @@
+html {
+    border: 1px dotted red;
+}
+
+.song-edit-label {
+    margin-left: 0.5em;
+    font-family: 'HelveticaNeue-LightItalic', 'Helvetica Neue', 'sans-serif';
+    font-size: 14px;
+    color: #eeeeee;
+    padding-bottom: 1px;
+}
+
+.song-edit-field {
+    position: absolute;
+    width: 23.75em;
+    height: 3.2em;
+    margin-top: 0.5em;
+    margin-left: -26em;
+    padding-left: 1em;
+    font-family: 'HelveticaNeue', 'Helvetica Neue', 'sans-serif';
+    font-size: 14px;
+    border: none;
+}
+
+.form-container {
+    /*position: relative;*/
+    display: flex;
+    flex-direction: column;
+    margin-left: 10em;
+
+}
+#submit-song {
+    top: -3em;
+
+    position: relative;
+    right: -6em;
+}
+.page-title {
+    position: absolute;
+    font-family: 'HelveticaNeue-Medium', 'Helvetica Neue', 'sans-serif';
+    font-size: 20px;
+    color: #eeeeee;
+    margin-top: 2em;
+    margin-left: -2em;
+
+}
+#song-title-div {
+margin-top: 3em;
+}

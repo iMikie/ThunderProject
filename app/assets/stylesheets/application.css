@@ -16,15 +16,25 @@
 html, body {
     height: 100%;
     width: 100%;
+    background: url(bg_dark_watermark.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .debug {
     /*border: 1px dotted red;*/
 }
-
+.center {
+    width: 1100px;
+    margin:auto;
+}
 .the_container {
     background-color: #bbbbbb;
     width: 1100px;
+    margin:auto;
+
 }
 
 #menu_spacer {
@@ -50,6 +60,8 @@ nav ul li:hover > ul {
 
 nav {
     /*display: inline-table;*/
+    margin: auto;
+
     width: 1100px;
     height: 40px;
     margin-right: auto;
@@ -132,13 +144,16 @@ nav ul ul ul {
     left: 100%;
     top: 0;
 }
-
+.search-row-height {
+    height:20px;
+}
 .title2 {
     width: 250px;
 }
 
 .title {
     width: 250px;
+
 }
 
 .composer {
@@ -147,6 +162,7 @@ nav ul ul ul {
 
 .voicing {
     width: 50px;
+
 }
 
 .description {
@@ -162,11 +178,11 @@ nav ul ul ul {
 }
 
 .arranger_one {
-    width: 120px;
+    width: 110px;
 }
 
 .arranger_two {
-    width: 120px;
+    width: 110px;
 }
 
 .PDF {
@@ -179,7 +195,7 @@ th {
 
 .song-heading {
     background: #efefef;
-    background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);
+    background: linear-gradient(top, #efefef 0%, #919191 100%);
     background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%);
     background: -webkit-linear-gradient(top, #efefef 0%, #bbbbbb 100%);
     box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.15);
@@ -191,31 +207,41 @@ th {
 }
 
 .song-row {
-    background: #abb4bf;
-    border: 1px solid #AAAAAA;
-    color: white;
+    background-color: #f4f4f4;
+    /*border: 1px solid #AAAAAA;*/
+    border-bottom: 1px solid #bbbbbb;
+    padding: -1px;
+    color: #3c4362;
     height: 25px;
     font: bold 12px Arial, Helvetica, sans-serif;
 }
 
 .tablediv {
-    background-color: #abb4bf;
-    padding-left: 2em;
-    width: 1068px;
+    background-color: #EEEEEE;
+
+    padding-left: 1.5em;
+    width: 1076px;
 }
 
 .song_table {
     width: 1000px;
     padding: 1em;
+    border: 1px solid #aaaaaa;
+    /*background-color: #FFFFFF;*/
+    background: #f4f4f4;
+    /*background: linear-gradient(top, #efefef 0%, #919191 100%);*/
+    /*background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%);*/
+    /*background: -webkit-linear-gradient(top, #efefef 0%, #bbbbbb 100%);*/
+    /*box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.15);*/
 
 }
 
 .song_search {
-    padding-left: 2em;
+    padding-left: 2.5em;
     margin-top: 0px;
     padding-top: 2em;
-    width: 1076px;
-    height: 100px;
+    width: 1070px;
+    height: 60px;
     background-color: #EEEEEE;
     color: #15355a;
     font: bold 12px Arial, Helvetica, sans-serif;
@@ -245,7 +271,7 @@ th {
 }
 
 .abut {
-    background: url(bg_abut.jpg) top left repeat-x;
+    background: url("bg_abut.jpg") top left repeat-x;
     border: none;
     color: #fff;
     font: bold 11px Arial, Helvetica, sans-serif;
@@ -262,10 +288,10 @@ th {
 }
 
 .abut2 {
-    /*top: -60px;*/
+    top: -70px;
 
     position: relative;
-    left: -16em;
+    left: -6em;
 }
 
 .abut3 {

@@ -3,13 +3,13 @@
 
     <%= form_tag '/songs/search' do %>
       <br>
-      <%= text_field_tag 'title', nil, class: "title2", placeholder: "Title" %>
-      <%= text_field_tag 'composer', nil, class: 'composer', placeholder: "Composer" %>
-      <%= text_field_tag 'voicing', nil, class: 'voicing', placeholder: "Voicing" %>
-      <%= text_field_tag 'category', nil, class: 'category', placeholder: "Category" %>
-      <%= text_field_tag 'larger_work', nil, class: 'larger_work', placeholder: "Larger Work" %>
-      <%= text_field_tag 'arranger_one', nil, class: 'arranger_one', placeholder: "Arranger One" %>
-      <%= text_field_tag 'arranger_two', nil, class: 'arranger_two', placeholder: "Arranger Two" %>
+      <%= text_field_tag 'title', nil, class: "title2 search-row-height", placeholder: "Title" %>
+      <%= text_field_tag 'composer', nil, class:'composer search-row-height', placeholder: "Composer" %>
+      <%= text_field_tag 'voicing', nil, class: 'voicing search-row-height', placeholder: "Voicing" %>
+      <%= text_field_tag 'category', nil, class: 'category search-row-height', placeholder: "Category" %>
+      <%= text_field_tag 'larger_work', nil, class: 'larger_work search-row-height', placeholder: "Larger Work" %>
+      <%= text_field_tag 'arranger_one', nil, class: 'arranger_one search-row-height', placeholder: "Arranger One" %>
+      <%= text_field_tag 'arranger_two', nil, class: 'arranger_two search-row-height', placeholder: "Arranger Two" %>
       <%= submit_tag 'Search', class: "abut abut2" %>
     <% end %>
 

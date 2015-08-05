@@ -26,7 +26,7 @@ class SongsController < ApplicationController
     options_string = ""
     options_params = []
     params.each do |key, value|
-      puts "key: #{key}   value: #{value}"
+      # puts "key: #{key}   value: #{value}"
       next if ["utf8", "authenticity_token", "commit", "controller", "action"].include? key
       if value.length != 0
         if options_string.length != 0
@@ -39,10 +39,6 @@ class SongsController < ApplicationController
 
     @songs = Song.where(options_string, *options_params)
     #Song.where("title like ? and description like ?", titleval, descval).to_sql
-    #@songs = Song.where("title like ?" , '%Noel%')
-    # @songs.each do |song|
-    #   puts song.inspect
-    # end
 
     render "songs/index"
   end
@@ -53,9 +49,40 @@ class SongsController < ApplicationController
   # GET /songs/new
   # assumes views/songs/new.html.erb
   def new
-    @render_club_photo = false
     @song = Song.new
   end
 
+  def edit
+
+  end
+
+  def create
+    @render_club_photo = false
+    @song = Song.new(song_params)
+
+    respond_to do |format|
+      if @song.save
+        format.html { redirect_to @song, notice: 'Song was successfully created.' }
+        format.json { render json: @song}# render(json: {})
+      else
+        format.html { render :new }
+        format.json { render json: @song.errors, status: :unprocessable_entity }
+      end
+  end
+  def update
+    @render_club_photo = false
+
+  end
+    private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_song
+      @song = Song.find(params[:id])
+    end
+
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def song_params
+      params.require(:song).permit(:title, :voicing, :composer, :arranger_one, :arranger_two, :category, :larger_work)
+    end
+  end
 
 end
