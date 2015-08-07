@@ -2,8 +2,8 @@
 
 
 <!--<div class="song_page">-->
-<div class="song-container debug">
-  <div class="song-left_column debug">
+<div class="song-container ">
+  <div class="song-left_column ">
     <p class="small_title"> Title: </p>
 
     <p class="large_field"> <%= @song.title %> </p>
@@ -50,8 +50,9 @@
     </div>
   </div>
 
-  <div class="song-right_column debug">
-    <% if File.exist?("#{@song.song_number}.pdf") %>
+  <div class="song-right_column ">
+    <% path = Rails.root.join("public", "SOTS_Songs", "#{@song.song_number}.pdf").to_s %>
+    <% if File.exist?(path) %>
       <iframe src="/SOTS_Songs/<%= @song.song_number %>.pdf" class="pdf">
       </iframe>
     <% end %>

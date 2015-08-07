@@ -88,10 +88,9 @@ nav ul li:hover > ul {
 nav {
     /*display: inline-table;*/
     margin: auto;
-
+    mergin-left: 16em;
     width: 1100px;
     height: 40px;
-    margin-right: auto;
     background: #efefef;
     background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);
     background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%);
@@ -105,8 +104,7 @@ nav ul {
     /*background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%);*/
     /*background: -webkit-linear-gradient(top, #efefef 0%, #bbbbbb 100%);*/
     /*box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.15);*/
-    padding: 0 20px;
-    /*border-radius: 10px;*/
+padding-left: 16em;    /*border-radius: 10px;*/
     list-style: none;
     position: relative;
     top: -15px;
@@ -144,7 +142,7 @@ nav ul li a {
 
 nav ul ul {
     background: #5f6975;
-    border-radius: 0px;
+    border-radius: 0;
     padding: 0;
     position: absolute;
     top: 100%;
@@ -188,7 +186,7 @@ nav ul ul ul {
 }
 
 .composer {
-    width: 160px;
+    width: 150px;
 }
 
 .voicing {
@@ -197,7 +195,7 @@ nav ul ul ul {
 }
 
 .description {
-    width: 150px;
+    width: 400px;
 }
 
 .larger_work {
@@ -213,7 +211,7 @@ nav ul ul ul {
 }
 
 .arranger_two {
-    width: 110px;
+    width: 100px;
 }
 
 .PDF {
@@ -268,7 +266,6 @@ nav ul ul ul {
 
 .song_search {
     padding-left: 2.5em;
-    margin-top: 0px;
     margin-bottom: 1em;
     margin-left: 1em;
     padding-top: 2em;
@@ -279,7 +276,6 @@ nav ul ul ul {
     font: bold 12px Arial, Helvetica, sans-serif;
     text-transform: uppercase;
     letter-spacing: 0.06em;
-    padding-bottom: 0px;
     /*border-bottom: 5px solid #bbbbbb;*/
 }
 
@@ -377,6 +373,7 @@ nav ul ul ul {
     margin-left: 350px;
     margin-top: 100px;
     padding: 2em;
+    padding-bottom: 10px;
     width: 300px;
     height: 200px;
     background-color: #EEEEEE;
@@ -384,7 +381,6 @@ nav ul ul ul {
     font: bold 14px Arial, Helvetica, sans-serif;
     text-transform: uppercase;
     letter-spacing: 0.06em;
-    padding-bottom: 10px;
 }
 
 .input_box2 {
@@ -396,9 +392,7 @@ nav ul ul ul {
     background-color: #EEEEEE;
     color: #15355a;
     font: bold 14px Arial, Helvetica, sans-serif;
-
     letter-spacing: 0.06em;
-    padding-bottom: 2em;
 }
 
 #error_explanation {
