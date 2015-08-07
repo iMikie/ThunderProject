@@ -37,13 +37,25 @@
 
       <p class="large_field"> <%= @song.arranger_two %> </p>
     <% end %>
-    <%= link_to 'Back', songs_path,  class: "abut abut2 abut3" %>
+
+    <p class="small_title"> Song Number: </p>
+
+    <p class="large_field"> <%= @song.song_number %> </p>
+
+    <div class="button-pod">
+      <%= link_to 'Back', songs_path, class: "blue-button simple-button button2-position" %><br>
+      <%= link_to 'Edit', edit_song_path, class: "green-button simple-button button4-position" %><br>
+      <%= link_to 'Delete', @song, method: :delete, data: {confirm: 'Confirm delete: '}, class: "red-button
+    simple-button button5-position" %>
+    </div>
   </div>
+
   <div class="song-right_column debug">
-    <iframe src="/SOTS_Songs/<%= @song.song_number %>.pdf" class="pdf">
+    <% if File.exist?("#{@song.song_number}.pdf") %>
+      <iframe src="/SOTS_Songs/<%= @song.song_number %>.pdf" class="pdf">
+      </iframe>
+    <% end %>
 
-
-    </iframe>
   </div>
 </div>
 

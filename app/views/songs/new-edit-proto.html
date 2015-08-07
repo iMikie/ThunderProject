@@ -1,72 +1,75 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <!--<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>-->
-    <!--<%= csrf_meta_tags %>-->
-    <!--<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
-    <link rel="stylesheet" href="../../assets/stylesheets/new-edit-proto.css">
+<div class="form-container">
+  <%= form_for @song do |f| %>
+  <% if @song.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@song.errors.count, "error") %> prohibited this song from being saved:</h2>
 
-    <title></title>
-</head>
-<body>
-<div class="form-container" >
-    <%= form_for @song do |f| %>
+    <ul>
+      <% @song.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+  <div class="left-column">
+    <div class="page-title">Edit Song Information:</div>
+    <br>
+    <br>
+    <br>
 
-    <div class="song-edit-div" id="song-title-div">
-        <%= f.label :title, 'Song Title:', class:"song-edit-label" %><br>
-        <!--<label for="song-title" class="song-edit-label"> Song Title: </label><br>-->
-        <img class="shadow-box" class="song-title-box" src="images/shadow_box.png">
-        <%= f.text_field :title, placeholder: "Title", class: "song-edit-field"  %>
-        <!--<input id="song-title" class="song-edit-field" type="text" name="song[:title]"/>-->
+    <div class="song-edit-div" id="song-title-div" >
+      <%= f.label :title, 'Song Title:', class: "song-edit-label" %><br>
+      <%= image_tag("shadow_box.png") %>
+      <%= f.text_field :title, class: "song-edit-field", placeholder: "Title" %>
     </div>
-    <div class="song-edit-div" id="song-composer-div">
-        <%= f.label :composer, 'Composer:', class:"song-edit-label" %><br>
-        <!--<label for="song-title" class="song-edit-label"> Composer: </label><br>-->
-        <img class="shadow-box" class="song-title-box" src="images/shadow_box.png">
-        <%= f.text_field :composer, class: "song-edit-field" %>
-        <!--<input id="song-title" class="song-edit-field" type="text" name="song[composer]"/>-->
+    <div class="song-edit-div">
+      <%= f.label :composer, 'Composer:', class: "song-edit-label" %><br>
+      <%= image_tag("shadow_box.png") %>
+      <%= f.text_field :composer, class: "song-edit-field", placeholder: "Composer" %>
     </div>
     <div class="song-edit-div" id="song-voicing-div">
-        <%= f.label :voicing, 'Voicing:', class:"song-edit-label" %><br>
-        <!--<label for="song-title" class="song-edit-label"> Voicing: </label><br>-->
-        <img class="shadow-box"  src="images/shadow_box.png">
-        <%= f.text_field :voicing, class: "song-edit-field" %>
-        <!--<input id="song-title" class="song-edit-field" type="text" name="title"/>-->
+      <%= f.label :voicing, 'Voicing:', class: "song-edit-label" %><br>
+      <%= image_tag("shadow_box.png") %>
+      <%= f.text_field :voicing, class: "song-edit-field", placeholder: "Voicing" %>
     </div>
     <div class="song-edit-div" id="song-category-div">
-        <%= f.label :category, 'Category:', class:"song-edit-label" %><br>
-        <!--<label for="song-title" class="song-edit-label"> Category: </label><br>-->
-        <img class="shadow-box"  src="images/shadow_box.png">
-        <%= f.text_field :category, class: "song-edit-field" %>
-        <!--<input id="song-title" class="song-edit-field" type="text" name="title"/>-->
+      <%= f.label :category, 'Category:', class: "song-edit-label" %><br>
+      <%= image_tag("shadow_box.png") %>
+      <%= f.text_field :category, class: "song-edit-field", placeholder: "Category" %>
     </div>
     <div class="song-edit-div" id="song-larger-work-div">
-        <%= f.label :larger_work, 'Song Title:', class:"song-edit-label" %><br>
-        <!--<label for="song-title" class="song-edit-label"> Larger Work: </label><br>-->
-        <img class="shadow-box"  src="images/shadow_box.png">
-        <%= f.text_field :larger_work, class: "song-edit-field" %>
-        <!--<input id="song-title" class="song-edit-field" type="text" name="title"/>-->
-    </div>
-    <div class="song-edit-div" class="song-arranger-one-div">
-        <%= f.label :arranger_one, 'First Arranger:', class:"song-edit-label" %><br>
-        <!--<label for="song-title" class="song-edit-label"> First Arranger: </label><br>-->
-        <img class="shadow-box"  src="images/shadow_box.png">
-        <%= f.text_field :arranger_one, class: "song-edit-field" %>
-        <!--<input id="song-title" class="song-edit-field" type="text" name="title"/>-->
-    </div>
-    <div class="song-edit-div" class="song-arranger-two-div">
-        <%= f.label :arranger_two, 'Second Arranger:', class:"song-edit-label" %><br>
-        <!--<label for="song-title" class="song-edit-label"> Second Arranger: </label><br>-->
-        <img class="shadow-box"  src="images/shadow_box.png">
-        <%= f.text_field :arranger_two, class: "song-edit-field" %>
-        <!--<input id="song-title" class="song-edit-field" type="text" name="title"/>-->
-    </div>
-    <div class="actions">
-    <%= f.submit class: "abut abut2" %>
-</div>
-</div>
+      <%= f.label :larger_work, 'Larger Work:', class: "song-edit-label" %><br>
+      <%= image_tag("shadow_box.png") %>
+      <%= f.text_field :larger_work, class: "song-edit-field", placeholder: "Name of larger work" %>
 
-</body>
-</html>
+    </div>
+    <div class="song-edit-div" id="song-arranger-one-div">
+      <%= f.label :arranger_one, 'First Arranger:', class: "song-edit-label" %>
+      <br>
+      <%= image_tag("shadow_box.png") %>
+      <%= f.text_field :arranger_one, class: "song-edit-field", placeholder: "First arranger" %>
+    </div>
+    <div class="song-edit-div" id="song-arranger-two-div">
+      <%= f.label :arranger_two, 'Second Arranger:', class: "song-edit-label" %>
+      <br>
+      <%= image_tag("shadow_box.png") %>
+      <%= f.text_field :arranger_two, class: "song-edit-field", placeholder: "Second arranger" %>
+    </div>
+
+  </div>
+  <div class="right-column">
+    <div class="song-edit-div" id="song-number-div">
+      <%= f.label :song_number, 'Song Number:', class: "song-edit-label" %>
+      <br>
+      <%= image_tag("shadow_box.png") %>
+      <%= f.text_field :song_number, class: "song-edit-col2-field", placeholder: "Next number: #{@song_number}" %>
+    </div>
+  </div>
+  <br>
+  <div class="actions">
+    <%= f.submit  class: "green-button simple-button", id:"submit-song",  value: 'Submit Song' %>
+  </div>
+
+
+  <% end %>
+</div>

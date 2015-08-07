@@ -22,6 +22,17 @@ html {
     border: none;
 }
 
+.song-edit-col2-field {
+    position: absolute;
+    width: 23.75em;
+    height: 3.2em;
+    margin-top: -4.8em;
+    margin-left: .4em;
+    padding-left: 1em;
+    font-family: 'HelveticaNeue', 'Helvetica Neue', 'sans-serif';
+    font-size: 14px;
+    border: none;
+}
 .form-container {
     /*position: relative;*/
     display: flex;
@@ -29,12 +40,14 @@ html {
     margin-left: 10em;
 
 }
+
 #submit-song {
     top: -3em;
 
     position: relative;
     right: -6em;
 }
+
 .page-title {
     position: absolute;
     font-family: 'HelveticaNeue-Medium', 'Helvetica Neue', 'sans-serif';
@@ -44,6 +57,13 @@ html {
     margin-left: -2em;
 
 }
+
 #song-title-div {
-margin-top: 3em;
+    margin-top: 3em;
+}
+
+.right-column {
+    position: absolute;
+    left: 34em;
+    top: 13.35em;
 }

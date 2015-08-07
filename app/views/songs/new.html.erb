@@ -11,7 +11,7 @@
         </ul>
       </div>
     <% end %>
-
+<div class="left-column">
     <div class="page-title">Edit Song Information:</div>
     <br>
     <br>
@@ -41,6 +41,7 @@
        <%= f.label :larger_work, 'Larger Work:', class: "song-edit-label" %><br>
           <%= image_tag("shadow_box.png") %>
        <%= f.text_field :larger_work, class: "song-edit-field", placeholder: "Name of larger work" %>
+
     </div>
     <div class="song-edit-div" id="song-arranger-one-div">
        <%= f.label :arranger_one, 'First Arranger:', class: "song-edit-label" %>
@@ -48,15 +49,27 @@
           <%= image_tag("shadow_box.png") %>
         <%= f.text_field :arranger_one, class: "song-edit-field", placeholder: "First arranger" %>
      </div>
-     <div class="song-edit-div" id="song-arranger-two-div">
-         <%= f.label :arranger_two, 'Second Arranger:', class: "song-edit-label" %>
-         <br>
-           <%= image_tag("shadow_box.png") %>
-         <%= f.text_field :arranger_two, class: "song-edit-field", placeholder: "Second arranger" %>
-     </div>
+    <div class="song-edit-div" id="song-arranger-two-div">
+      <%= f.label :arranger_two, 'Second Arranger:', class: "song-edit-label" %>
+      <br>
+      <%= image_tag("shadow_box.png") %>
+      <%= f.text_field :arranger_two, class: "song-edit-field", placeholder: "Second arranger" %>
+    </div>
+
+  </div>
+  <div class="right-column">
+    <div class="song-edit-div" id="song-number-div">
+      <%= f.label :song_number, 'Song Number:', class: "song-edit-label" %>
+      <br>
+      <%= image_tag("shadow_box.png") %>
+      <%= f.text_field :song_number, class: "song-edit-col2-field", placeholder: "Next number: #{@song_number}" %>
+    </div>
+  </div>
            <br>
      <div class="actions">
-         <%= f.submit  class: "abut", id:"submit-song",  value: 'Submit Song' %>
+         <%= f.submit  class: "green-button simple-button", id:"submit-song",  value: 'Submit Song' %>
       </div>
-   <% end %>
+
+
+<% end %>
 </div>

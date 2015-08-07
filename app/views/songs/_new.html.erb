@@ -1,0 +1,27 @@
+
+<%= render partial: "new",
+           :locals => {:name => :title, the_label: 'Song Title:', prepop_type: "placeholder:", prepop_value: 'Title'} %>
+
+<%= render partial: "new",
+           :locals => {:name => :composer, the_label: 'Composer:', prepop_type: "placeholder:", prepop_value:
+             "Composer"} %>
+
+<%= render partial: "new",
+           :locals => {:name => :larger_work, the_label: 'Larger Work', prepop_type: "placeholder:", prepop_value:
+             "Larger Work"} %>
+
+<%= render partial: "new",
+           :locals => {:name => :arranger_one, the_label: 'First Arranger', prepop_type: "placeholder:", prepop_value:
+             "First Arranger"} %>
+
+<%= render partial: "new",
+           :locals => {:name => :arranger_two, the_label: 'Second Arranger', prepop_type: "placeholder:", prepop_value:
+             "Second Arranger"} %>
+
+
+
+<div class="song-edit-div" >
+  <%= f.label name, the_label, class: "song-edit-label" %><br>
+  <%= image_tag("shadow_box.png") %>
+  <%= f.text_field name, class: "song-edit-field", prepop_type  prepop_value %>
+</div>

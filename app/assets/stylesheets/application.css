@@ -13,6 +13,10 @@
  *= require_tree .
  *= require_self
  */
+.italic {
+    font-style: italic;
+}
+
 html, body {
     height: 100%;
     width: 100%;
@@ -24,17 +28,41 @@ html, body {
 }
 
 .debug {
-    /*border: 1px dotted red;*/
+    border: 1px dotted red;
 }
+
 .center {
     width: 1100px;
-    margin:auto;
+    margin: auto;
 }
+
 .the_container {
     background-color: #bbbbbb;
     width: 1100px;
-    margin:auto;
+    margin: auto;
 
+}
+
+.the_search_container {
+    background-color: #bbbbbb;
+    width: 1100px;
+    margin: auto;
+    margin-top: -1em;
+}
+
+.search-title {
+    color: #5f6975;
+    padding-top: 1em;
+    padding-left: 4em;
+    width: 50em;
+}
+
+.search-instructions {
+    color: #5f6975;
+    padding-top: 1em;
+    padding-left: 4em;
+    width: 50em;
+    margin-bottom: 1.5em;
 }
 
 #menu_spacer {
@@ -45,7 +73,6 @@ html, body {
 }
 
 nav ul ul {
-
     display: none;
 }
 
@@ -83,7 +110,7 @@ nav ul {
     list-style: none;
     position: relative;
     top: -15px;
-
+    z-index: 2;
     display: inline-table;
 }
 
@@ -144,9 +171,13 @@ nav ul ul ul {
     left: 100%;
     top: 0;
 }
+
+/*CSS for the song search page?*/
+
 .search-row-height {
-    height:20px;
+    height: 20px;
 }
+
 .title2 {
     width: 250px;
 }
@@ -189,16 +220,12 @@ nav ul ul ul {
     width: 120px;
 }
 
-th {
-    height: 40px;
-}
-
 .song-heading {
     background: #efefef;
-    background: linear-gradient(top, #efefef 0%, #919191 100%);
-    background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%);
-    background: -webkit-linear-gradient(top, #efefef 0%, #bbbbbb 100%);
-    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.15);
+    /*background: linear-gradient(top, #efefef 0%, #919191 100%);*/
+    /*background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%);*/
+    /*background: -webkit-linear-gradient(top, #efefef 0%, #bbbbbb 100%);*/
+    /*box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.15);*/
     /*border-radius: 10px;*/
     text-align: left;
     list-style: none;
@@ -210,7 +237,8 @@ th {
     background-color: #f4f4f4;
     /*border: 1px solid #AAAAAA;*/
     border-bottom: 1px solid #bbbbbb;
-    padding: -1px;
+    /*border-top: 1px solid #bbbbbb;*/
+    /*padding: -1px;*/
     color: #3c4362;
     height: 25px;
     font: bold 12px Arial, Helvetica, sans-serif;
@@ -218,9 +246,11 @@ th {
 
 .tablediv {
     background-color: #EEEEEE;
-
+    padding-top: 1em;
     padding-left: 1.5em;
-    width: 1076px;
+    width: 1074px;
+    border: 1px solid #aaaaaa;
+
 }
 
 .song_table {
@@ -233,22 +263,27 @@ th {
     /*background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%);*/
     /*background: -webkit-linear-gradient(top, #efefef 0%, #bbbbbb 100%);*/
     /*box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.15);*/
-
+    margin-left: 1.5em;
 }
 
 .song_search {
     padding-left: 2.5em;
     margin-top: 0px;
+    margin-bottom: 1em;
+    margin-left: 1em;
     padding-top: 2em;
-    width: 1070px;
-    height: 60px;
+    width: 1045px;
+    height: 90px;
     background-color: #EEEEEE;
     color: #15355a;
     font: bold 12px Arial, Helvetica, sans-serif;
     text-transform: uppercase;
     letter-spacing: 0.06em;
     padding-bottom: 0px;
+    /*border-bottom: 5px solid #bbbbbb;*/
 }
+
+/*CSS for login page*/
 
 .login-box {
     width: 200px;
@@ -270,33 +305,67 @@ th {
     padding-top: 3em;
 }
 
-.abut {
-    background: url("bg_abut.jpg") top left repeat-x;
+.red-button {
+    background: url("red_button.jpg") top left repeat-x;
+}
+
+.green-button {
+    background: url("green_button.jpg") top left repeat-x;
+}
+
+.blue-button {
+    background: url("blue_button.jpg") top left repeat-x;
+}
+
+.simple-button {
     border: none;
     color: #fff;
     font: bold 11px Arial, Helvetica, sans-serif;
     text-transform: uppercase;
     letter-spacing: 0.06em;
-    margin-left: 16em;
-    margin-bottom: 2px;
-    margin-top: 10px;
-    padding: 0px 13px;
     overflow: visible;
-    width: auto !important;
     height: 29px;
     line-height: 29px;
 }
 
-.abut2 {
-    top: -70px;
-
-    position: relative;
-    left: -6em;
+.button-pod {
+    margin-top: 1em;
+    height: 10em;
 }
 
-.abut3 {
-    padding: .5em;
+.button2-position {
+    position: relative;
+    padding: .8em 1em .8em 1em;
     text-decoration: none;
+    margin-left: 10em;
+}
+
+.search-button {
+    position: relative;
+    /*padding: .8em 1em .8em 1em;*/
+    text-decoration: none;
+    margin-left: 17em;
+    top: -2em;
+    /*top: 25em;*/
+    /*left: 19em;*/
+}
+
+.button4-position {
+    position: relative;
+    padding: .75em 1.25em .75em 1.25em;
+    text-decoration: none;
+    /*top: 20px;*/
+    top: 1em;
+    margin-left: 10em;
+}
+
+.button5-position {
+    position: relative;
+    padding: .75em 1.25em .75em 1.25em;
+    text-decoration: none;
+    /*top: 30px;*/
+    top: 2em;
+    margin-left: 8.5em;
 }
 
 .dbox_title {
