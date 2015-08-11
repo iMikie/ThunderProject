@@ -1,75 +1,81 @@
-<div class="form-container">
-  <%= form_for @song do |f| %>
-    <% if @song.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(@song.errors.count, "error") %> prohibited this song from being saved:</h2>
+<div class="song-container ">
+  <% if @song.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@song.errors.count, "error") %> prohibited this song from being saved:</h2>
 
-        <ul>
-          <% @song.errors.full_messages.each do |message| %>
-            <li><%= message %></li>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
-    <div class="left-column">
-      <div class="page-title">Edit Song Information:</div>
-      <br>
-      <br>
-      <br>
-
-      <div class="song-edit-div" id="song-title-div" >
-        <%= f.label :title, 'Song Title:', class: "song-edit-label" %><br>
-        <%= image_tag("shadow_box.png") %>
-        <%= f.text_field :title, class: "song-edit-field", value: @song.title %>
-      </div>
-      <div class="song-edit-div">
-        <%= f.label :composer, 'Composer:', class: "song-edit-label" %><br>
-        <%= image_tag("shadow_box.png") %>
-        <%= f.text_field :composer, class: "song-edit-field", value: @song.composer %>
-      </div>
-      <div class="song-edit-div" id="song-voicing-div">
-        <%= f.label :voicing, 'Voicing:', class: "song-edit-label" %><br>
-        <%= image_tag("shadow_box.png") %>
-        <%= f.text_field :voicing, class: "song-edit-field", value: @song.voicing%>
-      </div>
-      <div class="song-edit-div" id="song-category-div">
-        <%= f.label :category, 'Category:', class: "song-edit-label" %><br>
-        <%= image_tag("shadow_box.png") %>
-        <%= f.text_field :category, class: "song-edit-field", value: @song.category%>
-      </div>
-      <div class="song-edit-div" id="song-larger-work-div">
-        <%= f.label :larger_work, 'Larger Work:', class: "song-edit-label" %><br>
-        <%= image_tag("shadow_box.png") %>
-        <%= f.text_field :larger_work, class: "song-edit-field", value: @song.larger_work%>
-
-      </div>
-      <div class="song-edit-div" id="song-arranger-one-div">
-        <%= f.label :arranger_one, 'First Arranger:', class: "song-edit-label" %>
-        <br>
-        <%= image_tag("shadow_box.png") %>
-        <%= f.text_field :arranger_one, class: "song-edit-field", value: @song.arranger_one%>
-      </div>
-      <div class="song-edit-div" id="song-arranger-two-div">
-        <%= f.label :arranger_two, 'Second Arranger:', class: "song-edit-label" %>
-        <br>
-        <%= image_tag("shadow_box.png") %>
-        <%= f.text_field :arranger_two, class: "song-edit-field", value: @song.arranger_two%>
-      </div>
-
+      <ul>
+        <% @song.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
     </div>
-    <div class="right-column">
-      <div class="song-edit-div" id="song-number-div">
-        <%= f.label :song_number, 'Song Number:', class: "song-edit-label" %>
-        <br>
-        <%= image_tag("shadow_box.png") %>
-        <%= f.text_field :song_number, class: "song-edit-col2-field", value: @song.song_number%>
-      </div>
-    </div>
-    <br>
-    <div class="actions">
-      <%= f.submit  class: "green-button simple-button", id:"submit-song",  value: 'Submit Song' %>
-    </div>
-
-
   <% end %>
+
+
+  <div class="left-edit-column">
+    <div class="page-title">Song Information:</div>
+    <br>
+    <br>
+    <br>
+
+    <div class="form-container ">
+      <%= form_for @song do |f| %>
+        <div class="song-edit-div" id="song-title-div">
+          <%= f.label :title, 'Song Title:', class: "song-edit-label" %><br>
+          <%= image_tag("shadow_box2") %>
+          <%= f.text_field :title, class: "song-edit-field bold-title", value: @song.title %>
+        </div>
+        <div class="song-edit-div">
+          <%= f.label :composer, 'Composer:', class: "song-edit-label" %><br>
+          <%= image_tag("shadow_box2.png") %>
+          <%= f.text_field :composer, class: "song-edit-field", value: @song.composer %>
+        </div>
+        <div class="song-edit-div" id="song-voicing-div">
+          <%= f.label :voicing, 'Voicing:', class: "song-edit-label" %><br>
+          <%= image_tag("shadow_box2.png") %>
+          <%= f.text_field :voicing, class: "song-edit-field", value: @song.voicing %>
+        </div>
+        <div class="song-edit-div" id="song-category-div">
+          <%= f.label :category, 'Category:', class: "song-edit-label" %><br>
+          <%= image_tag("shadow_box2.png") %>
+          <%= f.text_field :category, class: "song-edit-field", value: @song.category %>
+        </div>
+        <div class="song-edit-div" id="song-larger-work-div">
+          <%= f.label :larger_work, 'Larger Work:', class: "song-edit-label" %><br>
+          <%= image_tag("shadow_box2.png") %>
+          <%= f.text_field :larger_work, class: "song-edit-field", value: @song.larger_work %>
+
+        </div>
+        <div class="song-edit-div" id="song-arranger-one-div">
+          <%= f.label :arranger_one, 'First Arranger:', class: "song-edit-label" %>
+          <br>
+          <%= image_tag("shadow_box2.png") %>
+          <%= f.text_field :arranger_one, class: "song-edit-field", value: @song.arranger_one %>
+        </div>
+        <div class="song-edit-div" id="song-arranger-two-div">
+          <%= f.label :arranger_two, 'Second Arranger:', class: "song-edit-label" %>
+          <br>
+          <%= image_tag("shadow_box2.png") %>
+          <%= f.text_field :arranger_two, class: "song-edit-field", value: @song.arranger_two %>
+        </div>
+        <div class="song-edit-div" id="song-number-div">
+          <%= f.label :song_number, 'PDF File Number:', class: "song-edit-label" %>
+          <br>
+          <%= image_tag("small_shadow_box.png") %>
+          <%= f.text_field :song_number, class: "song-edit-field song-num-pos", value: @song.song_number %>
+        </div>
+        <div class="actions">
+          <%= f.submit class: "green-button simple-button", id: "submit-song", value: 'Submit Song' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <!-- end of left column-->
+  <div class="pdf-right-column">
+    <% path = Rails.root.join("public", "SOTS_Songs", "#{@song.song_number}.pdf").to_s %>
+    <% if File.exist?(path) %>
+      <iframe src="/SOTS_Songs/<%= @song.song_number %>.pdf" class="pdf">
+      </iframe>
+    <% end %>
+  </div>
 </div>

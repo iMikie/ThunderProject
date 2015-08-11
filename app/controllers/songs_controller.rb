@@ -10,6 +10,7 @@ class SongsController < ApplicationController
 
   def show
     @song = current_song
+    render "songs/show"
   end
 
 #POST /songs/search

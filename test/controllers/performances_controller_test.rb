@@ -25,7 +25,7 @@ class PerformancesControllerTest < ActionController::TestCase
   end
 
   test "should show performance" do
-    get :show, id: @performance
+    get :show2, id: @performance
     assert_response :success
   end
 

@@ -1,10 +1,14 @@
-<div  class="the_search_container">
+<div class="the_search_container">
   <h3 class="search-title">Searching for Songs</h3>
+
   <p class="search-instructions">Searching is case insensitive and you need only enter only a partial string.
-    Also, each field you enter narrows the search.  Thus, typing <span class="italic">noel</span> into the Title field and
-  <span class="italic">johnson</span> into the Composer field will return only <span class="italic">African Noel</span>.
+    Also, each field you enter narrows the search. Thus, typing <span class="italic">noel</span> into the Title field
+    and
+    <span class="italic">johnson</span> into the Composer field will return only
+    <span class="italic">African Noel</span>.
   </p>
   <br>
+
   <div class="song_search">Song Search
     <%= form_tag '/songs/search' do %>
       <%= submit_tag 'Search', class: "blue-button simple-button search-button" %>
@@ -26,11 +30,12 @@
 
 
       <% @songs.each do |song| %>
-        <%= render partial: "song", :locals => {title: song.title, :song_id => song.id, :composer => song.composer,
-                                                :larger_work => song.larger_work, :voicing => song.voicing,
-                                                :category => song.category, :larger_work => song.larger_work,
-                                                :arranger_one => song.arranger_one, :arranger_two => song.arranger_two,
-                                                :song_number => song.song_number} %>
+        <%= render partial: "song",
+                   :locals => {title: song.title, :song_id => song.id, :composer => song.composer,
+                               :larger_work => song.larger_work, :voicing => song.voicing,
+                               :category => song.category, :larger_work => song.larger_work,
+                               :arranger_one => song.arranger_one, :arranger_two => song.arranger_two,
+                               :song_number => song.song_number} %>
       <% end %>
 
 
